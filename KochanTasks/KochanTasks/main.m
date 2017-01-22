@@ -138,8 +138,79 @@ int main(int argc, char * argv[]) {
         [myTool memoryRecall]; //will make accumulator equal 0.983563
         NSLog(@"\nMemory will be %f", [myTool accumulator]);
 
+//EX. 5.1.
+        //Write a program to generate and display a table of n and n2, for integer values of n
+            //ranging from 1 through 10. Be sure to print the appropriate column headings.
+        
+        int nFive;
+        NSLog(@"n       n2");
+        for(nFive = 1; nFive <= 10; nFive++) {
+            NSLog(@"%2i     %3i", nFive, nFive * nFive);
+//EX. 5.2
+            int triangularNumber, nFiveTwo;
+            
+            NSLog(@"Number      TriangularValue");
+            for(nFiveTwo = 5; nFiveTwo <= 50; nFiveTwo+=5) {
+                triangularNumber = nFiveTwo * (nFiveTwo + 1) / 2;
+                NSLog(@"%-3i         %3i", nFiveTwo, triangularNumber);
+            }
+//EX. 5.3 Print 10 Factorial.
+            int factorial = 1;
+            
+            for(int i = 5; i >= 1; i--) {
+                factorial = i * factorial;
+            }
+            NSLog(@"Factorial of 10 = %i", factorial);
+        }
+//EX 5.4. Checked on previous example.
+//EX 5.5 Program 5.5 allows the user to type in only five different numbers. Modify that program so that the user can type in the number of triangular numbers to be calculated.
+      //  int counter, number;
+       // int triangular = 0;
+        
+       // NSLog(@"how many times do you want to repeat?");
+      //  scanf("%i", &counter);
+       // for(int i = 1; i <= counter; i++) {
+        //    NSLog(@"What is the number to calculate triangular");
+           // scanf("%i", &number);
+           //
+           // for(int i = 1; i <= number; i++) {
+           //     triangular += i;
+            //}
+          //  NSLog(@"Triangular is %i", triangular);
+       // }
+//EX 5.6 Convert book for examples to while
+        int n, triangularNumber;
+        n = 1;
+        triangularNumber = 0;
+        while (n <= 200) {
+            triangularNumber += n;
+            n = n + 1;
+            NSLog(@"tri %i", triangularNumber);
+        }
+        NSLog (@"The 200th triangular number is %i", triangularNumber);
     
-    
+//EX 5.7. What would happen if you were to type a negative number into Program 5.8? Try it and see.
+    int number, right_digit;
+    NSLog (@"Enter your number.");
+        scanf ("%i", &number);
+    while ( number != 0 ) {
+        right_digit = number % 10;
+        NSLog (@"%i", right_digit);
+        number /= 10;
+    }
+//EX 5.8. Write a program that calculates the sum of the digits of an integer. For example, the sum of the digits of the number 2155 is 2 + 1 + 5 + 5, or 13. The program should accept any arbitrary integer the user types.
+        int myNum;
+        int rightDigit;
+        int mySum = 0;
+        NSLog(@"Add your number");
+        scanf("%i", &myNum);
+        
+        while(myNum != 0) {
+            rightDigit = myNum % 10;
+            mySum += rightDigit;
+            myNum /= 10;
+        }
+        NSLog(@"Sum of digits is %i", mySum);
     }
     return 0;
 }

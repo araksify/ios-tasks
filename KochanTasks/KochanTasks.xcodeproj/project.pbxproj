@@ -8,12 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8424D5801E33AC4B00C2CE38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8424D57F1E33AC4B00C2CE38 /* main.m */; };
-		8424D5891E33E5C700C2CE38 /* Accumulator.h in Sources */ = {isa = PBXBuildFile; fileRef = 8424D5881E33E5C700C2CE38 /* Accumulator.h */; };
 		8424D5981E33EF7C00C2CE38 /* Accumulate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8424D58F1E33EF7C00C2CE38 /* Accumulate.framework */; };
 		8424D59D1E33EF7C00C2CE38 /* AccumulateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8424D59C1E33EF7C00C2CE38 /* AccumulateTests.m */; };
 		8424D59F1E33EF7C00C2CE38 /* Accumulate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8424D5911E33EF7C00C2CE38 /* Accumulate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8424D5AA1E3509DC00C2CE38 /* Complex.h in Sources */ = {isa = PBXBuildFile; fileRef = 8424D5A91E3509DC00C2CE38 /* Complex.h */; };
-		8424D5AC1E35180000C2CE38 /* Rectangle.h in Sources */ = {isa = PBXBuildFile; fileRef = 8424D5AB1E35180000C2CE38 /* Rectangle.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -261,10 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8424D5AA1E3509DC00C2CE38 /* Complex.h in Sources */,
-				8424D5891E33E5C700C2CE38 /* Accumulator.h in Sources */,
 				8424D5801E33AC4B00C2CE38 /* main.m in Sources */,
-				8424D5AC1E35180000C2CE38 /* Rectangle.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
