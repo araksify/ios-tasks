@@ -35,7 +35,7 @@
 
 @implementation Accumulator
 {
-    double accumulator;
+    double accumulator; 
     double memory;
 }
     -(void) setAccumulator: (double) value {
@@ -49,6 +49,7 @@
         return accumulator;
     }
 
+//arithmetic methods
     -(double) add: (double) value {
         return accumulator += value;
     }

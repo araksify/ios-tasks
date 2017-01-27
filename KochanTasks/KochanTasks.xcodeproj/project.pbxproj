@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		8424D5801E33AC4B00C2CE38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8424D57F1E33AC4B00C2CE38 /* main.m */; };
 		8424D5981E33EF7C00C2CE38 /* Accumulate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8424D58F1E33EF7C00C2CE38 /* Accumulate.framework */; };
-		8424D59D1E33EF7C00C2CE38 /* AccumulateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8424D59C1E33EF7C00C2CE38 /* AccumulateTests.m */; };
-		8424D59F1E33EF7C00C2CE38 /* Accumulate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8424D5911E33EF7C00C2CE38 /* Accumulate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84BF238F1E3A8FC6000D4F2A /* Fraction.h in Sources */ = {isa = PBXBuildFile; fileRef = 84BF238E1E3A8FC6000D4F2A /* Fraction.h */; };
+		84BF23931E3AA1FC000D4F2A /* Calculator.h in Sources */ = {isa = PBXBuildFile; fileRef = 84BF23921E3AA1FC000D4F2A /* Calculator.h */; };
+		84BF23951E3BD8C7000D4F2A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BF23941E3BD8C7000D4F2A /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,13 +41,12 @@
 		8424D57F1E33AC4B00C2CE38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8424D5881E33E5C700C2CE38 /* Accumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Accumulator.h; sourceTree = "<group>"; };
 		8424D58F1E33EF7C00C2CE38 /* Accumulate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Accumulate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8424D5911E33EF7C00C2CE38 /* Accumulate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Accumulate.h; sourceTree = "<group>"; };
-		8424D5921E33EF7C00C2CE38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8424D5971E33EF7C00C2CE38 /* AccumulateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccumulateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8424D59C1E33EF7C00C2CE38 /* AccumulateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccumulateTests.m; sourceTree = "<group>"; };
-		8424D59E1E33EF7C00C2CE38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8424D5A91E3509DC00C2CE38 /* Complex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Complex.h; sourceTree = "<group>"; };
 		8424D5AB1E35180000C2CE38 /* Rectangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rectangle.h; sourceTree = "<group>"; };
+		84BF238E1E3A8FC6000D4F2A /* Fraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
+		84BF23921E3AA1FC000D4F2A /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Calculator.h; path = Chapter6/Calculator.h; sourceTree = "<group>"; };
+		84BF23941E3BD8C7000D4F2A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Chapter6/main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +78,8 @@
 		8424D5731E33AC4B00C2CE38 = {
 			isa = PBXGroup;
 			children = (
+				84BF23911E3AA1DE000D4F2A /* Chapter6 */,
 				8424D57E1E33AC4B00C2CE38 /* KochanTasks */,
-				8424D5901E33EF7C00C2CE38 /* Accumulate */,
-				8424D59B1E33EF7C00C2CE38 /* AccumulateTests */,
 				8424D57D1E33AC4B00C2CE38 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				8424D57F1E33AC4B00C2CE38 /* main.m */,
+				84BF238E1E3A8FC6000D4F2A /* Fraction.h */,
 				8424D5AB1E35180000C2CE38 /* Rectangle.h */,
 				8424D5A91E3509DC00C2CE38 /* Complex.h */,
 				8424D5881E33E5C700C2CE38 /* Accumulator.h */,
@@ -106,22 +106,13 @@
 			path = KochanTasks;
 			sourceTree = "<group>";
 		};
-		8424D5901E33EF7C00C2CE38 /* Accumulate */ = {
+		84BF23911E3AA1DE000D4F2A /* Chapter6 */ = {
 			isa = PBXGroup;
 			children = (
-				8424D5911E33EF7C00C2CE38 /* Accumulate.h */,
-				8424D5921E33EF7C00C2CE38 /* Info.plist */,
+				84BF23921E3AA1FC000D4F2A /* Calculator.h */,
+				84BF23941E3BD8C7000D4F2A /* main.m */,
 			);
-			path = Accumulate;
-			sourceTree = "<group>";
-		};
-		8424D59B1E33EF7C00C2CE38 /* AccumulateTests */ = {
-			isa = PBXGroup;
-			children = (
-				8424D59C1E33EF7C00C2CE38 /* AccumulateTests.m */,
-				8424D59E1E33EF7C00C2CE38 /* Info.plist */,
-			);
-			path = AccumulateTests;
+			name = Chapter6;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,7 +122,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8424D59F1E33EF7C00C2CE38 /* Accumulate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +248,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84BF23931E3AA1FC000D4F2A /* Calculator.h in Sources */,
 				8424D5801E33AC4B00C2CE38 /* main.m in Sources */,
+				84BF23951E3BD8C7000D4F2A /* main.m in Sources */,
+				84BF238F1E3A8FC6000D4F2A /* Fraction.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +266,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8424D59D1E33EF7C00C2CE38 /* AccumulateTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
