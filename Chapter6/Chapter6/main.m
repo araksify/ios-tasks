@@ -37,6 +37,20 @@ int main(int argc, char * argv[]) {
             }
             NSLog(@"\nAccumulator is %lf", [calculate accumulator]);
         }
+    //Excercise 6.4. Reverse the digits of an integer typed in from terminal. Consider that it might be negative number, so - sign will be logged at the end.
+        int typedNumber, rightDigit;
+        
+        NSLog(@"Please type a valid integer number you want to reverse.");
+        scanf("%i", &typedNumber);
+        
+        while (typedNumber != 0) {
+            if (typedNumber < 0)
+                typedNumber = -typedNumber;
+            rightDigit = typedNumber % 10;
+            NSLog(@"%i", rightDigit);
+            typedNumber /= 10;
+        }
+        NSLog(@"-");
     }
     return 0;
 }
