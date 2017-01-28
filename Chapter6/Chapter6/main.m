@@ -37,7 +37,7 @@ int main(int argc, char * argv[]) {
             }
             NSLog(@"\nAccumulator is %lf", [calculate accumulator]);
         }
-    //Excercise 6.5. Reverse the digits of an integer typed in from terminal. Consider that it might be negative number, so - sign will be logged at the end.
+    //Exercise 6.5. Reverse the digits of an integer typed in from terminal. Consider that it might be negative number, so - sign will be logged at the end.
         int typedNumber, rightDigit;
         
         NSLog(@"Please type a valid integer number you want to reverse.");
@@ -51,7 +51,7 @@ int main(int argc, char * argv[]) {
             typedNumber /= 10;
         }
         NSLog(@"-");
-    //Write a program that takes an integer keyed in from the terminal and extracts and displays each digit of the integer in English. (Remember to display zero if the user types in just 0.)
+    //Exercise 6.6. Write a program that takes an integer keyed in from the terminal and extracts and displays each digit of the integer in English. (Remember to display zero if the user types in just 0.)
         int typenDigit, leftDigit, power;
         NSString *numEnglish;
         NSLog(@"Please type a valid integer number to convert it in English.");
@@ -101,10 +101,22 @@ int main(int argc, char * argv[]) {
             }
             typenDigit = typenDigit - leftDigit * power;
             NSLog(@"%@", numEnglish);
-            len--;
+            --len;
         } while (len != 0);
         
-
+//Exercise 6.7. Program 6.10 has several inefficiencies. One inefficiency results from checking even numbers. Because any even number greater than 2 obviously cannot be prime, the program could simply skip all even numbers as possible primes and as possible divisors. The inner for loop is also inefficient because the value of p is always divided by all values of d from 2 through p–1. You can avoid this inefficiency if you add a test for the value of isPrime in the conditions of the for loop. In this manner, you can set up the for loop to continue as long as no divisor is found and the value of d is less than p. Modify Program 6.10 to incorporate these two changes; then run the program to verify its operation.
+        int p, d, isPrime;
+        NSLog(@"2");
+        for( p = 3; p <= 50; p+=2) {
+            isPrime = 1;
+            
+            for( d = 3; d < p; d+=2)
+                if(p % d == 0)
+                    isPrime = 0;
+            
+            if(isPrime != 0)
+                NSLog(@"%i", p);
+        }
     }
     return 0;
 }
