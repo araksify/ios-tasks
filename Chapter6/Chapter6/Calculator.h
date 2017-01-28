@@ -31,19 +31,23 @@ double number;
     number = value;
 }
 -(double) add: (double) value {
-    return number += value;
+    number += value;
+    return number;
 }
 -(double) subtract: (double) value {
-    return number -= value;
+    number -= value;
+    return number;
 }
 -(double) multiply: (double) value {
-    return number *= value;
+    number *= value;
+    return number;
 }
 -(double) divide: (double) value {
     if(value == 0)
-        return number = NAN;
+        number = NAN;
     else
-        return number /= value;
+        number /= value;
+    return number;
 }
 -(double) accumulator {
     return number;
