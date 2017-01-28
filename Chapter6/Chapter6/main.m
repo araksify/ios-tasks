@@ -15,7 +15,7 @@ int main(int argc, char * argv[]) {
         
         char operator;
         double value;
-        do {
+        while (operator != 'e' || operator != 'E') {
             NSLog(@"Insert operator, +, -, *, /, S or E");
             scanf("%lf %c", &value, &operator);
             if(operator == '+') {
@@ -30,12 +30,13 @@ int main(int argc, char * argv[]) {
                 NSLog(@"\nStart Program");
             } else if(operator == 'e' || operator == 'e') {
                 NSLog(@"nEnd of program");
+                NSLog(@"Accumulator is %lf", [calculate accumulator]);
                 break;
             } else {
                 NSLog(@"\nYour character is not expected.");
             }
             NSLog(@"\nAccumulator is %lf", [calculate accumulator]);
-        } while (operator != 'e' || operator != 'E');
+        }
     }
     return 0;
 }

@@ -41,7 +41,7 @@ double number;
 }
 -(double) divide: (double) value {
     if(value == 0)
-        return NAN;
+        return number = NAN;
     else
         return number /= value;
 }
